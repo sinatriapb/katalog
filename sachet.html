@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etawalin Sachet</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+
+  <body class="bgYellow">
+    <!-- MAIN CONTAINER -->
+    <div class="container mt-3">
+      <h6 class="text-center">Geser ke kanan</h6>
+      <!-- CONTAINER STICKY CARD -->
+      <div class="card">
+        <!-- CAROUSEL GAMBAR -->
+        <div id="carouselExample" class="carousel slide p-2">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="img/1boxSachet.webp"
+                class="d-block w-100 rounded"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="img/bahanDelicate.webp"
+                class="d-block w-100 rounded"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="img/manfaatDelicate.webp"
+                class="d-block w-100 rounded"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="img/waspadaDelicate.webp"
+                class="d-block w-100 rounded"
+                alt="..."
+              />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!-- AKHIR CAROUSEL GAMBAR -->
+        <!-- detail produk -->
+        <div class="product-details">
+          <div class="product-name">Etawalin Sachet</div>
+          <div class="product-price">
+            <span class="original">Rp.90.000</span>
+            <span class="real">Rp.65.000</span>
+          </div>
+          <div class="product-sold">Terjual: 4455</div>
+          <div class="product-rating pb-3">
+            &#9733;&#9733;&#9733;&#9733;&#9734; (4.0)
+          </div>
+        </div>
+        <!-- akhir detail produk -->
+      </div>
+      <!-- AKHIR STICKY CARD -->
+
+      <!-- DESKRIPSI PRODUK -->
+      <div class="product-description">
+        <h4>Spesifikasi Produk</h4>
+        <p>
+          Merek : Etawalin Sachet <br />
+          Isi : 5 sachet/box <br />
+          Masa Penyimpanan : 24 Bulan <br />
+          Tanggal Kadaluarsa : 15-10-2026 <br />
+          Izin Edar (BPOM) : POM TR232052411 <br />
+          Dikirm dari : Cilacap, Jawa tengah
+        </p>
+        <h4>Cara Pesan</h4>
+        <p>anda cukup klik tombol dibawah ini dan isi form boxnya!</p>
+      </div>
+
+      <!-- AKHIR DESKRIPSI PRODUK -->
+      <div class="header-promo">
+        <img src="img/promo1212Wide.webp" class="img-fluid" alt="..." />
+      </div>
+      <!-- STICKY BUTTON -->
+      <div class="container mt-5 text-center sticky-button bg-light">
+        <!-- Tombol untuk membuka modal -->
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#formModal"
+        >
+          Pesan sekarang
+        </button>
+      </div>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="formModal"
+        tabindex="-1"
+        aria-labelledby="formModalLabel"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="formModalLabel">Form pemesanan</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <!-- Form -->
+
+              <form
+                id="loops-form-order"
+                action="https://app.loops.id/save-order/adv-sinatria-etawalin-tubuhsehat-com-email-3-3"
+                method="POST"
+              >
+                <input
+                  type="hidden"
+                  name="product"
+                  value="Etawalin - SIN2"
+                />
+                <div class="mb-4">
+                  <label for="name" class="form-label">Nama</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    placeholder="Masukan nama anda"
+                    required
+                  />
+                </div>
+                <div class="mb-4">
+                  <label for="phone" class="form-label">No Whatsapp</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="phone"
+                    name="phone"
+                    value=""
+                    placeholder="Masukan no WA aktif anda"
+                    pattern="[0]{1}[0-9]{8,12}"
+                    required
+                  />
+                </div>
+                <button
+                  type="submit"
+                  class="btn btn-success"
+                  id="loops-form-submit"
+                >
+                  Lanjutkan Pemesanan
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- AKHIR STICKY BUTTON -->
+    </div>
+    <!-- AKHIR MAIN CONTAINER -->
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

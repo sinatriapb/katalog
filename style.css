@@ -1,0 +1,145 @@
+.bgYellow {
+    background-color: #fff3df;
+}
+.alamat {
+    font-size: 10px;
+}
+/* KATALOG */
+.product-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.productCard {
+    flex: 0 0 calc(33.333% - 1rem);
+    scroll-snap-align: start;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    background-color: #fff;
+    cursor: pointer;
+}
+/* efek klik */
+@keyframes clickEffect {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.productCard:active {
+    animation: clickEffect 0.2s ease;
+}
+/* akhir efek klik */
+.productCard img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.productCard h5 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.productCard .price {
+    font-size: 1rem;
+}
+
+.productCard .price .original {
+    text-decoration: line-through;
+    color: #999;
+    margin-right: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .productCard {
+        flex: 0 0 calc(100% / 3 - 1rem);
+    }
+}
+
+@media (max-width: 576px) {
+    .productCard {
+        flex: 0 0 calc(100% / 2 - 1rem);
+    }
+}
+/* AKHIR KATALOG */
+/* PAGE ETAWALIN DELICATE */
+.card {
+    /* position: sticky; */
+    top: 0;
+    box-shadow: 0 5px 9px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    z-index: 1000;
+    /* padding: 1rem; */
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.product-details {
+    text-align: center;
+}
+
+.product-name {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.product-price {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+.product-price .original {
+    text-decoration: line-through;
+    color: red;
+    margin-right: 0.5rem;
+}
+
+.product-sold {
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.product-rating {
+    color: #ffc107;
+    margin-bottom: 1rem;
+}
+
+.product-description {
+    padding: 1rem;
+    background: #fefefe;
+    /* border-radius: 10px; */
+    overflow-y: auto;
+    max-height: 50vh;
+}
+
+.sticky-button {
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem;
+    /* background-color: #fff; */
+    text-align: center;
+    /* box-shadow: 0 -5px 7px rgba(0, 0, 0, 0.1); */
+    z-index: 1000;
+}
+@media (min-width: 768px) {
+    .product-description {
+        max-height: none;
+    }
+}
+/* carousel Delicate */
+
+/* AKHIR PAGE ETAWALIN DELICATE */
