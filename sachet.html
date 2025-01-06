@@ -25,30 +25,34 @@
       <!-- CONTAINER STICKY CARD -->
       <div class="card">
         <!-- CAROUSEL GAMBAR -->
-        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <div
+          id="carouselExampleInterval"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
           <div class="carousel-inner">
-            <div class="carousel-item active"data-bs-interval="2000">
+            <div class="carousel-item active" data-bs-interval="2000">
               <img
                 src="img/1boxSachet.webp"
                 class="d-block w-100 rounded"
                 alt="..."
               />
             </div>
-            <div class="carousel-item"data-bs-interval="2000">
+            <div class="carousel-item" data-bs-interval="2000">
               <img
                 src="img/bahanDelicate.webp"
                 class="d-block w-100 rounded"
                 alt="..."
               />
             </div>
-            <div class="carousel-item"data-bs-interval="2000">
+            <div class="carousel-item" data-bs-interval="2000">
               <img
                 src="img/manfaatDelicate.webp"
                 class="d-block w-100 rounded"
                 alt="..."
               />
             </div>
-            <div class="carousel-item"data-bs-interval="2000">
+            <div class="carousel-item" data-bs-interval="2000">
               <img
                 src="img/waspadaDelicate.webp"
                 class="d-block w-100 rounded"
@@ -144,48 +148,63 @@
             </div>
             <div class="modal-body">
               <!-- Form -->
-
               <form
                 id="loops-form-order"
-                action="https://app.loops.id/save-order/adv-sinatria-etawalin-tubuhsehat-com-email-3-3"
+                class="loops-forms"
+                action="https://app.loops.id/save-order/adv-sinatria-etawalin-tubuhsehat-com-email-3-3-2"
                 method="POST"
               >
                 <input
                   type="hidden"
                   name="product"
-                  value="Etawalin - SIN2"
+                  value="SACHET - Etawalin - SIN2"
                 />
-                <div class="mb-4">
-                  <label for="name" class="form-label">Nama</label>
+
+                <div class="loops-group">
+                  <label for="name"
+                    >Nama lengkap <span class="red">*</span></label
+                  >
                   <input
                     type="text"
-                    class="form-control"
                     id="name"
-                    placeholder="Masukan nama anda"
+                    name="name"
+                    value=""
+                    placeholder="Tulis nama Anda"
                     required
                   />
                 </div>
-                <div class="mb-4">
-                  <label for="phone" class="form-label">No Whatsapp</label>
+                <div class="loops-group">
+                  <label for="phone">No HP <span class="red">*</span></label>
                   <input
                     type="text"
-                    class="form-control"
                     id="phone"
                     name="phone"
                     value=""
-                    placeholder="Masukan no WA aktif anda"
+                    placeholder="Sebutkan nomor HP aktif Anda: contoh 081234567890"
                     pattern="[0]{1}[0-9]{8,12}"
                     required
                   />
                 </div>
-                <button
-                  type="submit"
-                  class="btn btn-success"
-                  id="loops-form-submit"
-                >
-                  Lanjutkan Pemesanan
-                </button>
+                <div class="loops-group">
+                  <input
+                    id="loops-form-submit"
+                    type="submit"
+                    value="Beli Sekarang"
+                    class="loops-submit"
+                  />
+                </div>
+                <input type="hidden" id="current" name="current" value="" />
+                <input type="hidden" name="redirect" value="" />
+                <input type="hidden" name="_loops_nonce" value="" />
+                <p class="loops-footer">
+                  Powered by
+                  <a
+                    href="https://loops.id/?utm_source=form-embed&utm_content=277070"
+                    >Loops.id</a
+                  >.
+                </p>
               </form>
+              <!-- end form -->
             </div>
           </div>
         </div>
